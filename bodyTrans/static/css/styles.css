@@ -41,11 +41,23 @@ textarea {
     width:100%;
     padding: 20px;
     text-align: center;
+    color:#fff;
 }
 
 .sidebar h2 {
     margin-top: 5px;
     color:#fff;
+}
+.content>a>button{
+    border:none;
+    padding:1rem;
+    width:40px;
+    height:30px;
+    font-size: 17px;
+    background-color: #fff;
+    color:#333;
+    font-weight:bold;
+    
 }
 .container .row{
     display:flex;
@@ -86,7 +98,5 @@ textarea {
 @media screen and (max-width:400px) {
     .sidebar{
         width:100%;
-        color:#fff;
-
     }
 }
