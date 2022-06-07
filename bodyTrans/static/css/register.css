@@ -12,7 +12,7 @@ body{
 }
 
 .container{
-    margin:0 auto;
+    margin:3.5rem auto;
     display: flex;
     flex-direction: column;
     justify-content:center;
