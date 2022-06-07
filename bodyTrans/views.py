@@ -21,7 +21,7 @@ def index(request):
            usermail = mail.cleaned_data["email"]
            request.session["usermail"] = usermail
            request.session["user"] = username
-           return HttpResponseRedirect(reverse(""))
+           return HttpResponseRedirect(reverse("home"))
 
         else:
             return render(request, "register.html", {
