@@ -6,6 +6,7 @@
 body {
     margin: 0;
     background-color: white;
+    
 }
 
 code {
@@ -16,7 +17,9 @@ h1 {
     margin-top: 0px;
     padding-top: 20px;
 }
-
+p.about_it{
+    color:#fff;
+}
 textarea {
     height: 90vh;
     width: 80%;
@@ -34,7 +37,8 @@ textarea {
 
 .sidebar {
     background-color:brown;
-    height: 900px;
+    height: 100%;
+    width:30%;
     padding: 20px;
 }
 
