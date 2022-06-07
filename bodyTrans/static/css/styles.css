@@ -52,7 +52,7 @@ textarea {
     border:none;
     padding:1rem;
     width:100px;
-    height:30px;
+    height:50px;
     font-size: 17px;
     background-color: #fff;
     color:#333;
@@ -61,6 +61,8 @@ textarea {
 }
 .container .row{
     display:flex;
+    justify-content:space-between;
+    align-items:center;
     flex-wrap: wrap;
 }
 
@@ -106,5 +108,13 @@ textarea {
         justify-content:center;
         align-items: center;
         gap: 30px;
+    }
+    .container .row{
+        margin:0 auto;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+
     }
 }
