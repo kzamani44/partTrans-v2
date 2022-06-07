@@ -51,13 +51,13 @@ textarea {
 .content>a>button{
     border:none;
     padding:1rem;
-    width:40px;
+    width:100px;
     height:30px;
     font-size: 17px;
     background-color: #fff;
     color:#333;
     font-weight:bold;
-    
+
 }
 .container .row{
     display:flex;
