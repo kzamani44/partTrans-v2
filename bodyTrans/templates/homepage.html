@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link href="{% static 'css/styles222.css' %}" rel="stylesheet">
+  </head>
+  <body>
+        
+          <a href="{% url 'index' %}"><button>Sign In</button></a>
+
+          <a href="{% url 'humanbody' %}">
+           <div>
+             <h3>Human Body</h3>
+             <img src="{% static '/img/human.jpeg' %}" class="img">
+           </div>
+          </a>
+
+          <a href="{% url 'humanbody' %}">
+            <div>
+              <h3>Animal Body</h3>
+              <img src="{% static '/img/animal.jpeg' %}">
+            </div>
+           </a>
+          
+          <a href="{% url 'humanbody' %}">
+            <div>
+              <h3>Birds</h3>
+              <img src="{% static '/img/birds.jpeg' %}" class="img">
+            </div>
+</a>
+           
+          <a href="{% url 'humanbody' %}">
+            <div>
+              <h3>Reptiles</h3>
+              <img src="{% static '/img/reptiles.jpeg' %}">
+            </div>
+          </a>
+      </body>
+      </head>

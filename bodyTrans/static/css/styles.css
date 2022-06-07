@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color:brown;
+    height: 900px;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+.container .row{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.container .row img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+.container .row input {
+    width:200px;
+}
+.how{
+    color: aliceblue;
+}
+
+
+
+
+.info{
+    padding:20px;
+    width:100px;
+    margin:0 auto;
+    color: aliceblue;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;          
+  }
+  .info div{
+    color: white;
+  }
+  img{
+    border-radius:50%;
+    width:100px; height:100px;
+  }
+
+@media screen and (max-width:400px) {
+    
+}

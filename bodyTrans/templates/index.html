@@ -1,0 +1,311 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>homepage</title>
+        <title>Translator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="row">
+            <div class="sidebar col-lg-2 col-md-3">
+                <h2>Translator</h2>
+                <div>
+                    <a href="{% url 'home' %}"><button>Home</button></a>
+
+                    <div class="info">
+                      <div class="img">
+                        <img src="{% static 'img/head.jpeg' %}">
+                      </div>
+                      <div>
+                        <p>{{ user }}</p>
+                        <p>{{ usermail }}</p>
+                      </div>
+                    </div>
+
+                    <form action="" method="" class="about_it">
+                      {% csrf_token %}
+                      A simple web application to helps you indicate parts of human body,
+                      <br><br>
+                      and to help you translate them to three different languages which
+                      <br><br>
+                      are English, Yoruba, and French language.
+                      <br><br><br>
+                      Click on the image you want to indentify and watch it get translated
+                      <br><br>
+                      below
+                  </form>
+                </div>
+                {% block nav %}
+                {% endblock %}
+            </div>
+            <div class="main col-lg-10 col-md-9">
+                {% block body %}
+                
+                <div class="container">
+                    <div class="row">
+                      <div class="col-sm" id="first">
+                       <div id="img"> 
+                        <img src="{% static '/img/head.jpeg' %}" onclick="outputPart();">
+                       </div>
+                       <div>
+                        <form action="" method="post">
+                          {% csrf_token %}
+                            <div class="form1">
+                              <input type="text" id="output0" placeholder="english" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                            </div>
+                            <div class="form2">
+                              <input type="text" id="output00" placeholder="yoruba" class="form-control" aria-label="Last name" value="{{ out }}">
+                            </div>
+                            <div class="form3">
+                              <input type="text" id="output000" placeholder="french" class="form-control" aria-label="Last name" value="{{ out }}">
+                            </div>
+                        </form>
+                       </div>   
+                      
+                      </div>
+                      <div class="col-sm" id="second">
+                        <div id="img">
+                         <img src="{% static '/img/neck.jpeg' %}" onclick="outputPart1();">
+                        </div>
+                        <div>
+                            <form action="" method="post">
+                              {% csrf_token %}
+                                <div class="form1">
+                                  <input type="text" id="output1" placeholder="english" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                                </div>
+                                <div class="form2">
+                                  <input type="text" id="output11" placeholder="yoruba" class="form-control" aria-label="Last name" value="{{ out }}">
+                                </div>
+                                <div class="form3">
+                                  <input type="text" id="output111" placeholder="french" class="form-control" aria-label="Last name" value="{{ out }}">
+                                </div>
+                            </form>
+                        </div> 
+                      </div>
+                      <div class="col-sm" id="third">
+                        <div id="img">
+                         <img src="{% static '/img/body.jpeg' %}"  onclick="outputPart2();">
+                        </div>
+                        <div>
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                  <div class="form1">
+                                    <input type="text" id="output2" placeholder="english" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                                  </div>
+                                  <div class="form2">
+                                    <input type="text" id="output22" placeholder="yoruba" class="form-control" aria-label="Last name" value="{{ out }}">
+                                  </div>
+                                  <div class="form3">
+                                    <input type="text" id="output222" placeholder="french" class="form-control" aria-label="Last name" value="{{ out }}">
+                                  </div>
+                            </form>
+                        </div>     
+                      </div>
+                      <div class="col-sm" id="fourth">
+                        <div id="img">
+                         <img src="{% static '/img/hands.jpeg' %}"  onclick="outputPart3();">
+                        </div>
+                        <div>
+                          <form action="" method="post">
+                            {% csrf_token %}
+                              <div class="form1">
+                                <input type="text" id="output3" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                              </div>
+                              <div class="form2">
+                                <input type="text" id="output33" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                              <div class="form3">
+                                <input type="text" id="output333" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                          </form>
+                        </div>   
+                      </div>
+                      <div class="col-sm" id="fifth">
+                        <div id="img">
+                         <img src="{% static '/img/legs.jpeg' %}" onclick="outputPart4();">
+                        </div>
+                        <div>
+                          <form action="" method="post">
+                            {% csrf_token %}
+                              <div class="form1">
+                                <input type="text" id="output4" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                              </div>
+                              <div class="form2">
+                                <input type="text" id="output44" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                              <div class="form3">
+                                <input type="text" id="output444" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                          </form>
+                        </div>   
+                      </div>
+
+                      <div class="col-sm" id="fifth">
+                        <div id="img">
+                         <img src="{% static '/img/foots.jpeg' %}" onclick="outputPart5();">
+                        </div>
+                        <div>
+                          <form action="" method="post">
+                            {% csrf_token %}
+                              <div class="form1">
+                                <input type="text" id="output5" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                              </div>
+                              <div class="form2">
+                                <input type="text" id="output55" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                              <div class="form3">
+                                <input type="text" id="output555" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                          </form>
+                        </div>   
+                      </div>
+
+                      <div class="col-sm" id="fifth">
+                        <div id="img">
+                         <img src="{% static '/img/toes.jpg' %}" onclick="outputPart6();">
+                        </div>
+                        <div>
+                          <form action="" method="post">
+                            {% csrf_token %}
+                              <div class="form1">
+                                <input type="text" id="output6" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                              </div>
+                              <div class="form2">
+                                <input type="text" id="output66" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                              <div class="form3">
+                                <input type="text" id="output666" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                          </form>
+                        </div>   
+                      </div>
+
+                      <div class="col-sm" id="fifth">
+                        <div id="img">
+                         <img src="{% static '/img/nails.jpeg' %}" onclick="outputPart7();">
+                        </div>
+                        <div>
+                          <form action="" method="post">
+                            {% csrf_token %}
+                              <div class="form1">
+                                <input type="text" id="output7" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                              </div>
+                              <div class="form2">
+                                <input type="text" id="output77" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                              <div class="form3">
+                                <input type="text" id="output777" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                          </form>
+                        </div>   
+                      </div>
+
+                      <div class="col-sm" id="fifth">
+                        <div id="img">
+                         <img src="{% static '/img/eyes.jpeg' %}" onclick="outputPart8();">
+                        </div>
+                        <div>
+                          <form action="" method="post">
+                            {% csrf_token %}
+                              <div class="form1">
+                                <input type="text" id="output8" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                              </div>
+                              <div class="form2">
+                                <input type="text" id="output88" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                              <div class="form3">
+                                <input type="text" id="output888" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                          </form>
+                        </div>   
+                      </div>
+
+                      <div class="col-sm" id="fifth">
+                        <div id="img">
+                         <img src="{% static '/img/mouth.jpeg' %}" onclick="outputPart9();">
+                        </div>
+                        <div>
+                          <form action="" method="post">
+                            {% csrf_token %}
+                              <div class="form1">
+                                <input type="text" id="output9" class="form-control" aria-label="First name" name="q" value="part of the body clicked">
+                              </div>
+                              <div class="form2">
+                                <input type="text" id="output99" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                              <div class="form3">
+                                <input type="text" id="output999" class="form-control" aria-label="Last name" value="{{ out }}">
+                              </div>
+                          </form>
+                        </div>   
+                      </div>
+                    </div>
+              </div>
+                  
+                {% endblock %}
+            </div>
+        </div>
+          
+
+
+        <script>
+          function outputPart(){
+              document.getElementById('output0').value = "HEAD";
+              document.getElementById('output00').value = "ORI";
+              document.getElementById('output000').value = "TETE";
+          }
+          function outputPart1(){
+              document.getElementById('output1').value = "NECK";
+              document.getElementById('output11').value = "ORUN";
+              document.getElementById('output111').value = "COU";
+          }
+          function outputPart2(){
+              document.getElementById('output2').value = "BODY";
+              document.getElementById('output22').value = "ARA";
+              document.getElementById('output222').value = "CORPS";
+          }
+          function outputPart3(){
+              document.getElementById('output3').value = "HANDS";
+              document.getElementById('output33').value = "OWO";
+              document.getElementById('output333').value = "MAINS";
+          }
+          function outputPart4(){
+              document.getElementById('output4').value = "LEGS";
+              document.getElementById('output44').value = "ESE";
+              document.getElementById('output444').value = "LES JAMBRES";
+          }
+          function outputPart5(){
+              document.getElementById('output5').value = "FOOTS";
+              document.getElementById('output55').value = "ATELEESE";
+              document.getElementById('output555').value = "PIEDS";
+          }
+          function outputPart6(){
+              document.getElementById('output6').value = "TOES";
+              document.getElementById('output66').value = "IKA ESE";
+              document.getElementById('output666').value = "ORTEILS";
+          }
+          function outputPart7(){
+              document.getElementById('output7').value = "NAILS";
+              document.getElementById('output77').value = "EEKANNA";
+              document.getElementById('output777').value = "CLOUS";
+          }
+          function outputPart8(){
+              document.getElementById('output8').value = "EYES";
+              document.getElementById('output88').value = "OJU";
+              document.getElementById('output888').value = "YEUX";
+          }
+          function outputPart9(){
+              document.getElementById('output9').value = "MOUTH";
+              document.getElementById('output99').value = "ENU";
+              document.getElementById('output999').value = "OJU";
+          }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    text-align: center;
+    line-height: 39px;
+    background-color:rgba(5, 1, 1, 0.534);
+    max-width:100%;
+  
+  }
+  .container{
+    margin-top: 100px;
+    text-align:center;
+    color: aliceblue;
+  }
+  .main{
+    margin:100px auto;
+    width:80%;
+    text-align:center;
+  }
+  
+  input{
+    border-radius:5px;
+    padding:5px;
+    margin:20px;
+  }
+  p input{
+    width: 50%;
+    height: 50px;
+    border-radius: 8px;
+    border-style: none;
+  }
+  .submit{
+    width:200px;
+    height:40px;
+    border-radius: 9px;
+    border-style: none;
+  }
